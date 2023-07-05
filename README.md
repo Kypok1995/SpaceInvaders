@@ -13,22 +13,22 @@ Player is controlled by arrow keys or WASD. Game allows player to move on X and 
 There are constantly no more than 3 enemies at the game (limitation is made with Unity Engine tags). Enemies have two behaviors: they constantly move and spawn a projectiles using InvokeRepeating method from UnityEngine.
 
 ## Score system
-I also implemented score system in the game: killed enemy increase a players score by 1. Score is shown on text object and updated after each killed enemy, using a UnityEngine.UI methods. With current build, one of requirements to win a game is to hit 20 scores.
+I also implemented a scoring system in the game: a killed enemy increases the player's score by 1. The score is displayed in a text object and is updated after each killed enemy using the UnityEngine.UI methods. In the current build, one of the requirements to win the game is to reach 20 points.
 
 ## Boss
-After killing 20 enemies (amount can be changed in the future levels) boss is spawned. Defeating a boss is a second requirement to win a game.
-Boss behavior class inherits enemy behavior class. Boss implements the same movement behavior as usual enemy, but have a following differences:
-- Boss use a MultipleShoot skill, which spawn 3 projectiles at the same time instead of just one for usual enemies;
-- Boss has HP system: 20 HP at the start, each collision with player's missile decrease his HP by 1. Boss dies once his HP goes to 0. Boss HP is shown at the text object and updates with UnityEngine.UI methods;
-- Usual enemies spawn projectiles every 2 seconds, boss spawns his projectiles in random time range between 2 and 4 seconds, using Random.Range method.
+After killing 20 enemies (the number can be changed in the next levels), a boss appears. Defeating the boss is the second requirement to win the game.
+The boss behavior class inherits the enemy behavior class. The boss implements the same movement behavior as a normal enemy, but has the following differences:
+- The boss uses the MultipleShoot skill, which creates 3 projectiles at the same time instead of one for ordinary enemies;
+- The boss has a HP system: 20 HP at the beginning, each collision with the player's rocket reduces his HP by 1. The boss dies when his HP becomes 0. The boss's HP is displayed in a text object and updated by UnityEngine.UI methods;
+- Normal enemies spawn projectiles every 2 seconds, the boss spawns his projectiles in a random time range from 2 to 4 seconds using the Random.Range method.
 
 ## Player lifes  
-Player have 3 lifes at the start of the game. Each collision with enemy projectiles decrease a life count by one. If player has 0 lifes, game is ended and restart screen is shown. 
+At the start of the game, the player has 3 lives. Each collision with enemy projectiles reduces the number of lives by one. If the player has 0 life, the game ends and a restart screen is displayed.
 
 ## Collisions
-In my game I implemented several types of collision with different consenquences:
-- Collision between player's missile and enemy: both missile and enemy are destroyed. If it's collision between boss and missile, missile is destroyed, HP of the boss is decreased.
-- Collision between player's missile and obstacle:  only missile is destroyed.
-- Collision between enemy projectile and player: projectile is desctroyed, player's lifes are decreased by one.
-- Collision between enemy projectile and player's missile: both projectile and missile are desctroyed.
+In my game, I implemented several types of collisions with different consequences:
+- Collision of the player's missile and the enemy: both the missile and the enemy are destroyed. When the boss collides with a rocket, the rocket is destroyed, the boss's HP decreases.
+- Collision of the player's missile with an obstacle: only the missile is destroyed.
+- Collision between an enemy projectile and the player: the projectile is destroyed, the player's hit points are reduced by one.
+- Collision between enemy projectile and player's missile: both projectile and missile are destroyed.
 
