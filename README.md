@@ -18,9 +18,9 @@ I also implemented a scoring system in the game: a killed enemy increases the pl
 ## Boss
 After killing 20 enemies (the number can be changed in the next levels), a boss appears. Defeating the boss is the second requirement to win the game.
 The boss behavior class inherits the enemy behavior class. The boss implements the same movement behavior as a normal enemy, but has the following differences:
-- The boss uses the MultipleShoot skill, which creates 3 projectiles at the same time instead of one for ordinary enemies;
+- The boss uses the MultipleShoot skill, which creates 3 projectiles at the same time instead of one for usual enemies;
 - The boss has a HP system: 20 HP at the beginning, each collision with the player's rocket reduces his HP by 1. The boss dies when his HP becomes 0. The boss's HP is displayed in a text object and updated by UnityEngine.UI methods;
-- Normal enemies spawn projectiles every 2 seconds, the boss spawns his projectiles in a random time range from 2 to 4 seconds using the Random.Range method.
+- Usual enemies spawn projectiles every 2 seconds, the boss spawns his projectiles in a random time range from 2 to 4 seconds using the Random.Range method.
 
 ## Player lifes  
 At the start of the game, the player has 3 lives. Each collision with enemy projectiles reduces the number of lives by one. If the player has 0 life, the game ends and a restart screen is displayed.
