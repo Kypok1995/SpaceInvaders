@@ -1,6 +1,11 @@
 # SpaceInvaders
 Repository for Space Invaders arcade game I made during Tech Academy bootcamp Live Project.
 
+## Summary of skills obtained
+- Experience with UnityEngine: tag system, collisions, audio source, user interface elements;
+- Improved C# skills: inheritance, foreach loops, arrays, accessing GameObjects and their properties through C# code.
+- Better understanding of the object-oriented programming paradigm.
+
 ## Invaders Screens
 First thing I did for this game was creating a basic set of scenes: menu, gameplay and restart scenes. Transition between scenes is smooth because of prefab of SceneLoader, provided by Tech Academy instructors.
 
